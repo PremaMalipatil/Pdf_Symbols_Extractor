@@ -25,15 +25,12 @@ pdf-symbol-extractor/
 │   │   └── tests/        # Unit tests
 │   ├── output/           # Extracted PNGs and SVGs
 │   ├── requirements.txt
-│   └── Dockerfile
 ├── frontend/
 │   ├── src/
 │   │   ├── components/   # React components
 │   │   ├── services/     # API client
 │   │   └── types/        # TypeScript types
 │   ├── package.json
-│   └── Dockerfile
-└── docker-compose.yml
 ```
 
 ## CV Pipeline
@@ -52,16 +49,6 @@ The symbol detection pipeline runs these steps for each PDF page:
 10. **SVG conversion** — Contour tracing with `approxPolyDP` → SVG path elements
 
 ## Quick Start
-
-### Docker (recommended)
-
-```bash
-docker-compose up --build
-```
-
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
-- API Docs: http://localhost:8000/docs
 
 ### Local Development
 
