@@ -82,7 +82,6 @@ export default function App() {
             </button>
           ))}
         </nav>
-
         {/* API status */}
         <div className="px-5 py-4 border-t border-[#1e2029]">
           <div className="flex items-center gap-2">
@@ -95,7 +94,6 @@ export default function App() {
           </div>
         </div>
       </aside>
-
       {/* ── Main content ── */}
       <main className="flex-1 overflow-y-auto">
         {page === 'dashboard' && (
@@ -121,7 +119,6 @@ export default function App() {
           />
         )}
       </main>
-
       {preview && (
         <PreviewModal
           symbol={preview}
