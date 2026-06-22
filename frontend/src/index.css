@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0f1117;
+    color: #e5e7eb;
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+  }
+
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: #13151c; }
+  ::-webkit-scrollbar-thumb { background: #2a2d3a; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+}
+
+@layer components {
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150 cursor-pointer text-[#9ca3af] hover:text-white hover:bg-[#1e2029];
+  }
+  .sidebar-link.active {
+    @apply bg-[#312e81]/60 text-white;
+  }
+  .sidebar-link.active svg {
+    @apply text-[#818cf8];
+  }
+  .btn-primary {
+    @apply bg-[#6366f1] hover:bg-[#818cf8] text-white font-medium px-5 py-2.5 rounded-lg transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-2 justify-center;
+  }
+  .btn-secondary {
+    @apply bg-[#1e2029] hover:bg-[#2a2d3a] border border-[#2a2d3a] text-[#d1d5db] font-medium px-5 py-2.5 rounded-lg transition-all duration-150 flex items-center gap-2 justify-center;
+  }
+  .card {
+    @apply bg-[#13151c] border border-[#1e2029] rounded-xl;
+  }
+  .symbol-thumb {
+    @apply bg-[#13151c] border border-[#1e2029] rounded-xl overflow-hidden transition-all duration-150 hover:border-[#6366f1]/50 hover:shadow-lg hover:shadow-[#6366f1]/10 cursor-pointer;
+  }
+}
